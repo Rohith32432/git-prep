@@ -31,6 +31,7 @@ html{
 }
 .content .links{
     min-width: max-content;
+    transition: .5s ease;
     width: 20%;
     border-radius:15px ;
     background-color: rgb(33, 33, 33);
@@ -61,11 +62,14 @@ html{
     box-sizing: border-box;
     padding: 15px;
     border-radius: 15px;
-
+    transition: .7s ease;
     background-color: rgb(28, 28, 28);
 }
 .content .main-content img{
     width: 100%;
+}
+.content .main-content .reading ul li div > h2{
+    text-transform: capitalize;
 }
 .content .main-content .reading ul li div code{
     display: block;
@@ -74,8 +78,48 @@ html{
     color: rgb(199, 199, 199);
     margin-top: 2%;
     font-size: larger;
+    cursor: pointer;
 }
 .content .main-content .reading ul li{
     margin: 5px;
     
+}
+.content :hover{
+     background-color: rgba(50, 50, 50, 0.767);
+}
+
+
+@media screen and (max-width:900px) {
+   
+   .content{
+    flex-direction: column;
+   }
+    .content .links{
+        position: relative;
+        width: 100%;
+        height: max-content;
+    }
+}
+@media (prefers-color-scheme: light) {
+    html{
+        color-scheme:   light;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .content .links{
+        background-color: rgb(221, 255, 247);
+    }
+    .content .links ul li:hover{
+        background-color: rgba(187, 245, 255, 0.548);
+        cursor: pointer;
+    }
+    .content :hover{
+        background-color: rgba(230, 255, 248, 0.879);
+   }
+   .content .main-content{
+    background-color: rgb(226, 255, 245);
+   }
+   .heading i{
+    fill: black;
+   
+   }
 }
